@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: customer_silver
+    description: "Cleaned and standardized customer data"
+
+    columns:
+      - name: customer_id
+        description: "Unique customer identifier"
+        tests:
+          - not_null
+          - unique
+
+      - name: customer_name
+        description: "Customer name"
+
+      - name: email
+        description: "Customer email"
+
+      - name: city
+        description: "Customer city"
+
+      - name: load_ts
+        description: "Record load timestamp"
